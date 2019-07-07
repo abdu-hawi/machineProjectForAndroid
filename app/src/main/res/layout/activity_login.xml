@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".LoginActivity">
+
+    <LinearLayout
+            android:id="@+id/ll"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_centerVertical="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+<!-- Edit Text for Phone -->
+        <EditText
+                android:id="@+id/txtPhoneL"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:hint="Phone"/>
+        <!-- Edit Text for Password -->
+        <EditText
+                android:id="@+id/txtPassL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password"/>
+        <!-- Button for login -->
+        <Button
+                android:id="@+id/btnLogin"
+                android:onClick="btnLoginEvent"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="#24b9a4"
+                android:textColor="@color/colorWhite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LOG IN"/>
+    </LinearLayout>
+    <!-- text view for register -->
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll"
+            android:text="CLICK HERE TO REGISTER"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorFF4B4A"
+            android:textSize="20sp"
+            android:id="@+id/txtRegisterLogin"
+            android:onClick="txtClick"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtRegisterLogin"
+            android:text="CLICK HERE TO RESET PASSWORD"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorOrange"
+            android:textSize="20sp"
+            android:id="@+id/txtResetLogin"
+            android:onClick="txtClick"/>
+
+</RelativeLayout>

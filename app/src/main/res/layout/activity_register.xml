@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".RegisterActivity">
+
+    <LinearLayout
+            android:id="@+id/ll"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_centerVertical="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        <!-- Edit Text For Name -->
+        <EditText
+                android:id="@+id/txtName"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:hint="Write your name"/>
+        <!-- Edit Text For Password -->
+        <EditText
+                android:id="@+id/txtPass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Write your password"/>
+        <!-- Edit Text For Email -->
+        <EditText
+                android:id="@+id/txtPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Write your phone"/>
+        <!-- Button For Register -->
+        <Button
+                android:id="@+id/btnReg"
+                android:onClick="btnRegiEvent"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#24b9a4"
+                android:textColor="#ffffff"
+                android:text="Register"/>
+    </LinearLayout>
+    <!-- Text View For Log in -->
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll"
+            android:text="CLICK HERE TO LOGIN"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:textStyle="bold"
+            android:textColor="@color/year"
+            android:textSize="20sp"
+            android:onClick="txtClick"/>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.hawi.myapplication.InvoiceDetailActivity">
+
+
+
+
+    <LinearLayout
+            android:layout_alignParentTop="true"
+            android:paddingTop="5dp"
+            android:id="@+id/llTop"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <TextView
+                android:id="@+id/txtSmInvDet"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/genre"
+                android:textSize="18sp"
+                android:text="System Machine"/>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="wrap_content">
+            <TextView
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/genre"
+                    android:textSize="18sp"
+                    android:text="Invoice No. : "/>
+            <TextView
+                    android:id="@+id/txtInvNoDetail"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/genre"
+                    android:textSize="18sp"
+                    android:text="@string/purchase_order"/>
+        </LinearLayout>
+
+        <TextView
+                android:id="@+id/txtDateInvDet"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/genre"
+                android:textSize="18sp"
+                android:text="22-22-2222"/>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="wrap_content">
+            <TextView
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/genre"
+                    android:textSize="18sp"
+                    android:text="Payment Method : "/>
+            <TextView
+                    android:id="@+id/txtInvMethod"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/genre"
+                    android:textSize="18sp"
+                    android:text="Visa"/>
+        </LinearLayout>
+    </LinearLayout>
+    <ScrollView
+            android:id="@+id/scrollTable"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/llTop">
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <!-- SCROLL VIEW FOR TABLE -->
+            <RelativeLayout
+                    android:id="@+id/rlScroll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                <TableLayout
+                        android:id="@+id/tableInvDetail"
+                        android:paddingTop="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                    <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingBottom="5dp"
+                            android:paddingTop="5dp"
+                            android:background="@drawable/side_nav_bar">
+
+                        <TextView
+                                android:layout_width="170dp"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:textColor="@color/colorWhite"
+                                android:layout_marginStart="2dp"
+                                android:gravity="start"
+                                android:text="@string/desc" />
+
+                        <TextView
+                                android:id="@+id/textView3"
+                                android:layout_width="40dp"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:textColor="@color/colorWhite"
+                                android:layout_marginStart="2dp"
+                                android:gravity="center"
+                                android:text="@string/qty" />
+
+                        <TextView
+                                android:layout_width="70dp"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:gravity="center"
+                                android:textColor="@color/colorWhite"
+                                android:layout_marginStart="2dp"
+                                android:text="@string/price" />
+                        <TextView
+                                android:layout_width="110dp"
+                                android:gravity="center"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:textColor="@color/colorWhite"
+                                android:layout_marginStart="2dp"
+                                android:text="@string/total" />
+                    </TableRow>
+
+                </TableLayout>
+
+
+            </RelativeLayout>
+            <!-- END SCROLL VIEW FOR TABLE -->
+
+
+            <!-- Tot Amt -->
+            <LinearLayout
+                    android:id="@+id/llTotAmt"
+                    android:layout_below="@id/rlScroll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="end"
+                    android:background="@drawable/side_nav_bar">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:gravity="end"
+                        android:text="@string/total_amount"
+                        android:textColor="#ff0000"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                <TextView
+                        android:id="@+id/txtTotInvDet"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:textColor="@color/colorWhite"
+                        android:text="120,000,000"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:textColor="@color/colorWhite"
+                        android:layout_marginStart="2dp"
+                        android:text="@string/sr"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+            </LinearLayout>
+            <!-- END Tot Amt -->
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+</RelativeLayout>

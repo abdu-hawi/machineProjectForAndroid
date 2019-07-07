@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#24b9a4</color>
+    <color name="colorPrimaryDark">#188a7a</color>
+    <color name="colorAccent">#34ddc5</color>
+    <color name="genre">#666666</color>
+    <color name="year">#888888</color>
+    <color name="list_divider">#d9d9d9</color>
+    <color name="list_row_start_color">#ffffff</color>
+    <color name="list_row_end_color">#ffffff</color>
+    <color name="list_row_hover_start_color">#ebeef0</color>
+    <color name="list_row_hover_end_color">#ebeef0</color>
+    <color name="colorGrey">#dbdbdb</color>
+    <color name="colorInv">#24b9a4</color>
+    <color name="colorInvDark">#188a7a</color>
+    <color name="colorGreen">#D6FFD4</color>
+    <color name="colorWhite">#fff</color>
+    <color name="colorOrange">#fd9729</color>
+    <color name="colorFire">#ff5301</color>
+    <color name="colorRed">#d00404</color>
+    <color name="colorFF4B4A">#FF4B4A</color>
+    <color name="colorBlack">#000000</color>
+    <color name="color1e9c39">#1e9c39</color>
+    <color name="color009fe3">#009fe3</color>
+
+
+
+</resources>

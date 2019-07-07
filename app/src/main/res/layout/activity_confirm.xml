@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.hawi.myapplication.ConfirmActivity"
+        android:background="@color/colorWhite"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+    <TextView
+            android:layout_alignParentTop="true"
+            android:id="@+id/text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="5dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorRed"
+            android:textSize="18sp"
+            android:text="@string/purchase_order"/>
+    <TextView
+            android:id="@+id/text1"
+            android:layout_below="@+id/text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="5dp"
+            android:textColor="@color/colorBlack"
+            android:textSize="16sp"
+            android:text="@string/take_sure"/>
+
+
+    <LinearLayout
+            android:id="@+id/llPayMethod"
+            android:layout_below="@id/text1"
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <TextView
+                android:textColor="@color/colorBlack"
+                android:text="PAYMENT METHOD: "
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:paddingTop="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        <RadioGroup
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <RadioButton
+                    android:id="@+id/rbVisa"
+                    android:onClick="onRadioButtonClick"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            <ImageView
+                    android:paddingTop="5dp"
+                    android:src="@drawable/visa"
+                    android:layout_width="40dp"
+                    android:layout_height="25dp"/>
+            <RadioButton
+                    android:id="@+id/rbCash"
+                    android:onClick="onRadioButtonClick"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            <TextView
+                    android:textColor="@color/colorFire"
+                    android:text="CASH"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/bangers"/>
+        </RadioGroup>
+
+
+    </LinearLayout>
+
+    <ScrollView
+            android:id="@+id/scrollTable"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/payFav"
+            android:layout_below="@id/llPayMethod">
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <!-- SCROLL VIEW FOR TABLE -->
+            <RelativeLayout
+                    android:id="@+id/rlScroll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                <TableLayout
+                        android:id="@+id/t1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorWhite"
+                            android:background="@color/color009fe3"
+                            android:paddingBottom="2dp"
+                            android:gravity="center"
+                            android:text="@string/description_of_the_order_list" />
+
+                    <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingBottom="5dp"
+                            android:paddingTop="5dp"
+                            android:background="@drawable/side_nav_bar">
+
+                        <TextView
+                                android:layout_width="170dp"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:textColor="@color/colorWhite"
+                                android:layout_marginStart="2dp"
+                                android:gravity="start"
+                                android:text="@string/desc" />
+
+                        <TextView
+                                android:id="@+id/textView3"
+                                android:layout_width="40dp"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:textColor="@color/colorWhite"
+                                android:layout_marginStart="2dp"
+                                android:gravity="center"
+                                android:text="@string/qty" />
+
+                        <TextView
+                                android:layout_width="70dp"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:gravity="center"
+                                android:textColor="@color/colorWhite"
+                                android:layout_marginStart="2dp"
+                                android:text="@string/price" />
+                        <TextView
+                                android:layout_width="110dp"
+                                android:gravity="center"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:textColor="@color/colorWhite"
+                                android:layout_marginStart="2dp"
+                                android:text="@string/total" />
+                    </TableRow>
+
+                </TableLayout>
+
+
+            </RelativeLayout>
+            <!-- END SCROLL VIEW FOR TABLE -->
+
+
+            <!-- Tot Amt -->
+            <LinearLayout
+                    android:id="@+id/llTotAmt"
+                    android:layout_below="@id/rlScroll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="end"
+                    android:background="@drawable/side_nav_bar">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:gravity="end"
+                        android:text="@string/total_amount"
+                        android:textColor="#ff0000"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                <TextView
+                        android:id="@+id/confTotAmt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:textColor="@color/colorWhite"
+                        android:text="120,000,000"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:textColor="@color/colorWhite"
+                        android:layout_marginStart="2dp"
+                        android:text="@string/sr"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+            </LinearLayout>
+            <!-- END Tot Amt -->
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+    <!-- Bottom -->
+    <RelativeLayout
+            android:id="@+id/payFav"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:gravity="center"
+            android:layout_alignParentBottom="true">
+        <Button
+                android:id="@+id/btnSendData"
+                android:layout_alignParentStart="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/color1e9c39"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="5dp"
+                android:textColor="@color/colorWhite"
+                android:textSize="16sp"
+                android:paddingEnd="5dp"
+                android:paddingStart="5dp"
+                android:onClick="onButtonClick"
+                android:text="@string/confirm_bill"/>
+        <Button
+                android:id="@+id/btnBackToMarket"
+                android:layout_toEndOf="@id/btnSendData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorFire"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="2dp"
+                android:textColor="@color/colorWhite"
+                android:textSize="16sp"
+                android:paddingEnd="5dp"
+                android:paddingStart="5dp"
+                android:onClick="onButtonClick"
+                android:text="@string/back_to_main"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="15dp"
+        android:background="@drawable/cell_shap">
+
+    <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/itemImg"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:paddingEnd="5dp"
+            android:layout_alignParentStart="true"/>
+    <TextView
+            android:id="@+id/itemName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="asdfasdasdasdasadassdaafdaasdfasdasdasdasadassdaafdasdssdsdada"
+            android:paddingStart="5dp"
+            android:lines="1"
+            android:layout_toEndOf="@+id/itemImg"
+            android:textStyle="bold"/>
+    <TextView
+            android:id="@+id/itemDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="asdfasdasdasdasadassdaafdasdsasdfasdasdasdasadassdaafdasdsdada"
+            android:paddingStart="5dp"
+            android:lines="1"
+            android:layout_below="@id/itemName"
+            android:layout_toEndOf="@+id/itemImg"/>
+    <TextView
+            android:id="@+id/itemPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/itemImg"
+            android:paddingStart="5dp"
+            android:paddingBottom="5dp"
+            android:layout_alignBottom="@id/itemImg"
+            android:text="2330"/>
+    <TextView
+            android:id="@+id/itemsSR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="5dp"
+            android:layout_toEndOf="@+id/itemPrice"
+            android:text=" SR"
+            android:paddingBottom="5dp"
+            android:layout_alignBottom="@id/itemImg"/>
+
+    <TextView
+            android:id="@+id/btnMin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_min"
+            android:paddingTop="5dp"
+            android:layout_alignBottom="@id/itemImg"
+            android:layout_marginStart="17dp"
+            android:layout_toEndOf="@+id/itemsSR"
+            android:paddingBottom="5dp"/>
+
+    <EditText
+            android:id="@+id/etQTY"
+            android:layout_width="49dp"
+            android:layout_height="41dp"
+            android:inputType="numberSigned"
+            android:text="100"
+            android:textAlignment="center"
+            android:ems="10"
+            android:layout_toEndOf="@+id/btnMin"
+            android:layout_alignBottom="@+id/itemPrice"
+            android:layout_marginBottom="-7dp"
+            android:layout_marginStart="7dp"
+            android:singleLine="true"
+            android:selectAllOnFocus="false"/>
+    <TextView
+            android:id="@+id/btnAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_add"
+            android:paddingTop="5dp"
+            android:layout_alignBottom="@id/itemImg"
+            android:layout_marginStart="7dp"
+            android:layout_toEndOf="@+id/etQTY"
+            android:paddingBottom="5dp"/>
+
+
+    <ImageView
+            android:id="@+id/itemShopping"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_shopping"
+            android:layout_alignParentEnd="true"
+            android:paddingTop="5dp"
+            android:layout_alignBottom="@id/itemImg"/>
+
+
+
+</RelativeLayout>
